@@ -5,7 +5,8 @@ import FoodItems from "./FoodItems";
 import WestIcon from '@mui/icons-material/West';
 import EastIcon from '@mui/icons-material/East';
 import IconButton from '@mui/material/IconButton';
-import NearBy from "./NearBy";
+import { hotels } from "./Restaurants/Rest";
+import Restaurants from "./Restaurants/Restaurants";
 
 export default function Home(){
 
@@ -31,12 +32,12 @@ export default function Home(){
                             <WestIcon size="sm" />
                         </IconButton>
                         <IconButton onClick={handleNext} style={{backgroundColor: '#c8c8c8'}}>
-                            <EastIcon />
+                            <EastIcon size="sm" />
                         </IconButton>
                     </div>
                 </div>
                 <div className="flex gap-8 mt-4 mb-4 overflow-hidden">
-                    {items.map((item, index) => {
+                    {items.map((item) => {
                         return(
                             <FoodItems
                                 key={item.id}
@@ -48,10 +49,36 @@ export default function Home(){
                     })}
                 </div>
             </div>
-            <div>
-                <NearBy />
+            <h2 className="text-[1.5em] font-bold">Restaurants Near You</h2>
+            <div className="flex gap-4 justify-between overflow-hidden">
+                {hotels.map((item) => {
+                    return(
+                        <Restaurants
+                           key={item.id}
+                           image={item.image}
+                           name={item.name}
+                           rating={item.rating}
+                           address={item.address}
+                           timing={item.timing}
+                        />
+                    )
+                })}
             </div>
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/23/ec86a309-9b06-48e2-9adc-35753f06bc0a_Food3BU.png" alt="" />
+            <h2 className="text-[1.5em] font-bold">Restaurants in bengaluru</h2>
+            <div className="flex gap-4 justify-between flex-wrap">
+                {hotels.map((item) => {
+                    return(
+                        <Restaurants
+                           key={item.id}
+                           image={item.image}
+                           name={item.name}
+                           rating={item.rating}
+                           address={item.address}
+                           timing={item.timing}
+                        />
+                    )
+                })}
+            </div>
         </div>
     );
 }
