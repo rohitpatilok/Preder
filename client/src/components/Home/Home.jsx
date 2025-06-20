@@ -7,6 +7,7 @@ import EastIcon from '@mui/icons-material/East';
 import IconButton from '@mui/material/IconButton';
 import { hotels } from "./Restaurants/Rest";
 import Restaurants from "./Restaurants/Restaurants";
+import Footer from "../Footer/Footer";
 
 export default function Home(){
 
@@ -21,7 +22,8 @@ export default function Home(){
     }
 
     return(
-        <div className="mx-auto flex flex-col max-w-[1200px] gap-6">
+        <div>
+            <div className="mx-auto flex flex-col max-w-[1200px] gap-6">
             <Navbar />
             <img className="h-[80vh] w-full m-0 p-0 rounded-2xl" src="/banner.jpg" alt="" />
             <div className="max-w-[1200px] ml-auto mr-auto">
@@ -79,6 +81,10 @@ export default function Home(){
                     )
                 })}
             </div>
+        </div>
+        <div className="mt-10">
+            <Footer />
+        </div>
         </div>
     );
 }
