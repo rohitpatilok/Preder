@@ -26,7 +26,7 @@ export default function Home(){
             <div className="mx-auto flex flex-col max-w-[1200px] gap-6">
             <Navbar />
             <img className="h-[80vh] w-full m-0 p-0 rounded-2xl" src="/banner.jpg" alt="" />
-            <div className="max-w-[1200px] ml-auto mr-auto">
+            <div className="ml-auto mr-auto">
                 <div className="flex">
                     <h1 className="text-[1.5em] font-bold">Whats on your mind?</h1>
                     <div className="ml-auto">
