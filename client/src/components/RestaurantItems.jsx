@@ -5,6 +5,7 @@ import DirectionsIcon from '@mui/icons-material/Directions';
 import Coupons from "./Coupons";
 import { Search, Filter } from 'lucide-react';
 import DirectionButton from "./DirectionButton";
+import Restaurant_food from "./Restaurant_food";
 
 export default function RestaurantItems(){
     return(
@@ -59,6 +60,13 @@ export default function RestaurantItems(){
                     Filters
                 </button>
             </div>
+        </div>
+        <div className="w-full">
+            <Restaurant_food />
+            <Divider />
+            <Restaurant_food />
+            <Divider />
+            <Restaurant_food />
         </div>
     </div>
     );
