@@ -4,7 +4,7 @@ import Rating from '@mui/material/Rating';
 export default function Restaurants(props){
     return(
             <a
-                className="w-full md:w-[22%] lg:shrink-0 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 bg-white dark:bg-gray-800 overflow-hidden group"
+                className="max-w-96 md:w-[22%] lg:shrink-0 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 bg-white dark:bg-gray-800 overflow-hidden group"
                 href="#"
             >
                 <img

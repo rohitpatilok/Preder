@@ -75,13 +75,13 @@ export default function Restaurant_food(){
                         {!clicked ? (
                             <button
                                 onClick={handleAddItem}
-                                className="w-full bg-white text-green-600 font-bold py-1.5 rounded-lg shadow-lg border border-gray-200 hover:bg-green-50 transition-all duration-200"
+                                className="w-full bg-white text-green-600 cursor-pointer font-bold py-1.5 rounded-lg shadow-lg border border-gray-200 hover:bg-green-50 transition-all duration-200"
                             >
                                 ADD
                             </button>
                         ) : (
                             <ButtonGroup variant="contained" aria-label="Basic button group" size="small" className="w-full shadow-lg">
-                                <Button onClick={handleDecrement} className="!bg-white !text-green-600 !font-bold !w-1/3 hover:!bg-red-50">
+                                <Button onClick={handleDecrement} className=" !bg-white !text-green-600 !font-bold !w-1/3 hover:!bg-red-50">
                                     <RemoveIcon fontSize="small" />
                                 </Button>
                                 <Button disabled className="!bg-white !text-green-600 !font-bold !w-1/3">{item}</Button>
