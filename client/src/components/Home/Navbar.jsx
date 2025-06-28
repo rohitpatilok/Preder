@@ -3,6 +3,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,7 +20,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className="flex justify-between items-center h-16 gap-8 m-4">
+      <div className="flex justify-between items-center h-16 gap-10 m-4">
         <a href="/" className="text-yellow-500 font-bold text-3xl">Preder</a>
         <div className="relative flex-grow max-w-xs mr-auto">
           <div className="flex items-center bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
@@ -47,7 +49,17 @@ export default function Navbar() {
             </div>
           )}
         </div>
-        <div className="flex items-center gap-1 cursor-pointer text-gray-700 hover:text-yellow-500">
+        
+        <div className="flex items-center text-gray-700 font-semibold gap-1">
+            <SearchOutlinedIcon />
+            <a href="">Search</a>
+        </div>
+        <div className="flex items-center text-gray-700 font-semibold gap-1">
+            <LocalOfferOutlinedIcon />
+            <a href="">Discounts</a>
+        </div>
+        <a className="cursor-pointer font-semibold text-gray-700" href="">About Us</a>
+        <div className="flex items-center gap-1 cursor-pointer text-gray-700">
             <PersonIcon />
             <button className="cursor-pointer font-semibold">Sign in</button>
         </div>

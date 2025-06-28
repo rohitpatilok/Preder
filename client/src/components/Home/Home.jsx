@@ -12,13 +12,23 @@ import Footer from "../Footer/Footer";
 export default function Home(){
 
     const [slide, setSlide] = useState(0);
-
-    function handleNext(){
-        setSlide(slide + 3);
-    }
+    const [prevSlide, setPrevSlide] = useState(false);
+    const [nextSlide, setNextSlide] = useState(false);
 
     function handlePrev(){
+        if(slide === 3){
+            setPrevSlide(false);
+        }
+        setNextSlide(false);
         setSlide(slide - 3);
+    }
+
+    function handleNext(){
+        if(slide == 6){
+            setNextSlide(true);
+        }
+        setPrevSlide(true);
+        setSlide(slide + 3);
     }
 
     return(
@@ -30,10 +40,10 @@ export default function Home(){
                 <div className="flex">
                     <h1 className="text-[1.5em] font-bold">Whats on your mind?</h1>
                     <div className="ml-auto">
-                        <IconButton onClick={handlePrev} style={{backgroundColor: '#EEEEEE', margin: '5px'}}>
+                        <IconButton onClick={handlePrev} disabled={!prevSlide} style={{backgroundColor: '#EEEEEE', margin: '5px'}}>
                             <WestIcon sx={{ fontSize: 20 }} />
                         </IconButton>
-                        <IconButton onClick={handleNext} style={{backgroundColor: '#c8c8c8'}}>
+                        <IconButton onClick={handleNext} disabled={nextSlide} style={{backgroundColor: '#c8c8c8'}}>
                             <EastIcon sx={{ fontSize: 20 }} />
                         </IconButton>
                     </div>
