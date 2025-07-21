@@ -1,5 +1,5 @@
 import React from "react";
-import Restaurants from "./Restaurants/Restaurants";
+import Restaurants from "./Restaurants";
 
 export default function NearBy(){
     return(

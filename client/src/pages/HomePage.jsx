@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
-import { items } from "./Items";
-import FoodItems from "./FoodItems";
+import Navbar from "../components/Navbar/Navbar";
+import { items } from "../services/itemsService";
+import FoodItems from "../components/Home/FoodItems";
 import WestIcon from '@mui/icons-material/West';
 import EastIcon from '@mui/icons-material/East';
 import IconButton from '@mui/material/IconButton';
-import { hotels } from "./Restaurants/Rest";
-import Restaurants from "./Restaurants/Restaurants";
-import Footer from "../Footer/Footer";
+import { hotels } from "../services/restaurantsService";
+import Restaurants from "../components/Restaurants";
+import Footer from "../components/Footer/Footer";
 
 export default function Home(){
 
